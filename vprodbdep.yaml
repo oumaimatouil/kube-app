@@ -17,11 +17,6 @@ spec:
       containers:
         - name: vprodb
           image: imranvisualpath/8amysql-db_1:V1
-          args:
-            - "--ignore-db-dir=lost+found"
-          volumeMounts:
-            - mountPath: /var/lib/mysql
-              name: vpro-db-data
           ports:
             - name: vprodb-port
               containerPort: 3306
